@@ -1,17 +1,26 @@
 
 # TO DO
-Did you finish physical setup?
-VS Code linked to Github?
-Pick an open source project based on welcoming new contributors
+m Did you finish physical setup?
+m VS Code linked to Github?
 
-Front end for data entry and display?
+** Pick an open source project based on welcoming new contributors **
+
 Who is my user and what problem are they solving?
-Python script for testing your own is_prime function using api to check?
+Front end for data entry and display?
+n Python script for testing your own alogorithm versus API?
+n Early users or mentor feedback?
 
-Consider separating concerns including todo, configs, helper functions, data initialization
-Include json request and response in v2
+y Consider separating concerns including todo, configs, helper functions, etc
+Log request, response, error? in v2.1
+What is the goal? What problem is solved by the log?
+What tools are needed to spot patterns in the log?
+
+n Include json request and response in v2
 Include prime factorization in v3
-Early users or mentor feedback?
+
+
+Include probabilistic primality test for num > lim^2?
+Or just use sympy?
 
 Handle negative numbers
 Handle -1, 0, 1

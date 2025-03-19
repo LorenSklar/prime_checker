@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Prime Checker API Documentation</title>
+    </head>
+    <body>
+        <h1>Welcome to the Prime Checker API!</h1>
+        <p>This API provides a way to check if a number is prime.</p>
+        <h2>Usage</h2>
+        <p>To check if a number is prime, use the following endpoint:</p>
+        <pre><code>GET /is_prime?number=&lt;integer&gt;</code></pre>
+        <p>Example usage: <code>/is_prime?number=17</code></p>
+
+        <h2>Responses</h2>
+        <ul>
+            <li>{"number": <int>, "is_prime": true} if the number is prime</li>
+            <li>{"number": <int>, "is_prime": false} if the number is composite</li>
+            <li>{"number": <int>, "is_prime": null} if the result is undetermined</li>
+        </ul>
+
+        <h2>Important Notes</h2>
+        <ul>
+            <li>Primality is determined using trial division checking all prime factors up to {{ limit }}.</li>
+            <li>A result of "true" indicates that no prime factors were found and the number is confirmed prime.</li>
+            <li>A result of "false" indicates that a prime factor was found and the number is confirmed composite.</li>
+            <li>A result of "null" means the number could not be confirmed prime as it is above the checkable limit.</li>
+        </ul>
+    </body>
+</html>

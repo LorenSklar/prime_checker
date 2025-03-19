@@ -7,8 +7,19 @@
         <p>This API provides a way to check if a number is prime.</p>
         <h2>Usage</h2>
         <p>To check if a number is prime, use the following endpoint:</p>
-        <pre><code>GET /v1/is_prime?number=&lt;integer&gt;</code></pre>
-        <p>Example usage: <code>/v1/is_prime?number=17</code></p>
+        <pre><code>POST /v2/is_prime</code></pre>
+        
+        <p>Request body (JSON):</p>
+        <pre><code>{
+"number": 17
+}
+        </code></pre>
+        
+        <p>Example usage with curl:</p>
+        <pre><code>curl -X POST http://127.0.0.1:5010/v2/is_prime \
+-H "Content-Type: application/json" \
+-d '{"number": 17}'
+        </code></pre>
 
         <h2>Responses</h2>
         <ul>

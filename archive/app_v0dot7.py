@@ -13,11 +13,11 @@ def is_prime(num):
 app = Flask(__name__)
 
 # Define the route for checking primality using query parameters
-@app.route('/v1/is_prime', methods=['GET'])
+@app.route('/v2/is_prime', methods=['GET', 'POST'])
 def check_prime():
     try:
         # Extract 'number' from the query parameters
-        num = int(request.args.get('number'))
+        num = request.json.post('number')
 
         # Check if the number is prime
         result = is_prime(num)
@@ -30,7 +30,7 @@ def check_prime():
         return jsonify({"error": f"Please provide an integer."}), 400
 
 @app.route('/')
-@app.route('/v1/')
+@app.route('/v2/')
 def home():
     return render_template('home.html')
 
